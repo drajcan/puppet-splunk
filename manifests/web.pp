@@ -1,13 +1,17 @@
 # vim: ts=2 sw=2 et
 class splunk::web (
-  $ciphersuite = $splunk::ciphersuite,
-  $sslversions = $splunk::sslversions,
-  $httpport = $splunk::httpport,
-  $ecdhcurvename = $splunk::ecdhcurvename,
-  $splunk_os_user = $splunk::splunk_os_user,
+
+  $ciphersuite               = $splunk::ciphersuite,
+  $sslversions               = $splunk::sslversions,
+  $httpport                  = $splunk::httpport,
+  $ecdhcurvename             = $splunk::ecdhcurvename,
+  $splunk_os_user            = $splunk::splunk_os_user,
   $splunk_app_precedence_dir = $splunk::splunk_app_precedence_dir,
-  $splunk_app_replace = $splunk::splunk_app_replace,
-  $splunk_home = $splunk::splunk_home
+  $splunk_app_replace        = $splunk::splunk_app_replace,
+  $splunk_home               = $splunk::splunk_home,
+  $privKeyPath               = $splunk::privKeyPath,
+  $caCertPath                = $splunk::caCertPath,
+
 ){
   $splunk_app_name = 'puppet_common_ssl_web'
   if $httpport == undef {
