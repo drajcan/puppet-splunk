@@ -64,5 +64,6 @@ class splunk::params (
     'debian'                    => 'dpkg',
     'redhat'                    => 'yum',
   }
+  $puppet_enterprise            = false
 }
 

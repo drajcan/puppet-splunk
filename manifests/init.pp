@@ -39,7 +39,8 @@ class splunk (
   $rolemap                    = $splunk::params::rolemap,
   $dontruncmds                = $splunk::params::dontruncmds,
   $pass4symmkey               = $splunk::params::pass4symmkey,
-  $phonehomeintervalinsec     = $splunk::params::phonehomeintervalinsec
+  $phonehomeintervalinsec     = $splunk::params::phonehomeintervalinsec,
+  $puppet_enterprise          = $splunk::params::puppet_enterprise,
 ) inherits splunk::params {
 
   if $type == 'uf' {
