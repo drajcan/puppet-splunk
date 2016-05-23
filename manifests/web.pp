@@ -13,7 +13,9 @@ class splunk::web (
   $caCertPath                = $splunk::caCertPath,
 
 ){
+
   $splunk_app_name = 'puppet_common_ssl_web'
+
   if $httpport == undef {
     file {"${splunk_home}/etc/apps/${splunk_app_name}_base":
       ensure  => absent,
@@ -35,6 +37,7 @@ class splunk::web (
       group   => $splunk_os_user,
       replace => $splunk_app_replace,
       content => template("splunk/${splunk_app_name}_base/local/web.conf"),
+      notify  => Service["splunk"],
     }
   } else {
     file {"${splunk_home}/etc/apps/${splunk_app_name}_disabled":
@@ -57,6 +60,7 @@ class splunk::web (
       group   => $splunk_os_user,
       replace => $splunk_app_replace,
       content => template("splunk/${splunk_app_name}_base/local/web.conf"),
+      notify  => Service["splunk"],
     }
 
   }
