@@ -1,10 +1,10 @@
 # vim: ts=2 sw=2 et
 define splunk::addsearchpeers {
   if $title != 'empty' {
-    $package = $splunk::package
+    $package     = $splunk::package
     $splunk_home = $splunk::splunk_home
-    $admin = $splunk::admin
-    $adminpass = $admin[pass]
+    $admin       = $splunk::admin
+    $adminpass   = $admin[pass]
     $dontruncmds = $splunk::dontruncmds
   
     if $adminpass == undef {

@@ -1,8 +1,8 @@
 # vim: ts=2 sw=2 et
 class splunk::service (
-  $package = $splunk::package,
+  $package     = $splunk::package,
   $splunk_home = $splunk::splunk_home,
-  $service = $splunk::service
+  $service     = $splunk::service
 ) {
   notice("enable => ${service}[enable]")
   notice("ensure => ${service}[ensure]")

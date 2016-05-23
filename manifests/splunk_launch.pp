@@ -1,8 +1,8 @@
 # vim: ts=2 sw=2 et
 class splunk::splunk_launch (
   $splunk_os_user = $splunk::splunk_os_user,
-  $splunk_bindip = $splunk::splunk_bindip,
-  $splunk_home = $splunk::splunk_home
+  $splunk_bindip  = $splunk::splunk_bindip,
+  $splunk_home    = $splunk::splunk_home
 ){
   if $splunk_os_user == undef {
     augeas { "${splunk_home}/etc/splunk-launch.conf splunk_os_user":

@@ -1,7 +1,7 @@
 # vim: ts=2 sw=2 et
 class splunk::passwd (
-  $admin = $splunk::admin,
-  $splunk_home = $splunk::splunk_home,
+  $admin          = $splunk::admin,
+  $splunk_home    = $splunk::splunk_home,
   $splunk_os_user = $splunk::splunk_os_user
 ){
   if $admin != undef {

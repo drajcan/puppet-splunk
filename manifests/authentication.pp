@@ -1,12 +1,12 @@
 # vim: ts=2 sw=2 et
 class splunk::authentication
 (
-  $splunk_home = $splunk::splunk_home,
-  $splunk_os_user = $splunk::splunk_os_user,
-  $auth = $splunk::auth,
+  $splunk_home               = $splunk::splunk_home,
+  $splunk_os_user            = $splunk::splunk_os_user,
+  $auth                      = $splunk::auth,
   $splunk_app_precedence_dir = $splunk::splunk_app_precedence_dir,
-  $splunk_app_replace = $splunk::splunk_app_replace,
-  $rolemap = $splunk::rolemap
+  $splunk_app_replace        = $splunk::splunk_app_replace,
+  $rolemap                   = $splunk::rolemap
 ){
   $splunk_app_name = 'puppet_common_auth'
   case $auth['authtype'] {

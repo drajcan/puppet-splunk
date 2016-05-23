@@ -124,4 +124,3 @@ class splunk (
 # 1) 10-18-2015 17:04:22.364 +0200 WARN  main - The hard fd limit is lower than
 # the recommended value. The hard limit is '4096' The recommended value is
 # '64000'.
-

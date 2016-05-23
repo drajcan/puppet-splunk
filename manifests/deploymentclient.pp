@@ -2,13 +2,13 @@
 class splunk::deploymentclient
 (
   $ds = $splunk::ds,
-  $ds_intermediate = $splunk::ds_intermediate,
-  $repositorylocation = $splunk::repositorylocation,
-  $splunk_home = $splunk::splunk_home,
-  $splunk_os_user = $splunk::splunk_os_user,
+  $ds_intermediate           = $splunk::ds_intermediate,
+  $repositorylocation        = $splunk::repositorylocation,
+  $splunk_home               = $splunk::splunk_home,
+  $splunk_os_user            = $splunk::splunk_os_user,
   $splunk_app_precedence_dir = $splunk::splunk_app_precedence_dir,
-  $splunk_app_replace = $splunk::splunk_app_replace,
-  $phonehomeintervalinsec = $splunk::phonehomeintervalinsec
+  $splunk_app_replace        = $splunk::splunk_app_replace,
+  $phonehomeintervalinsec    = $splunk::phonehomeintervalinsec
 ){
   $splunk_app_name = 'puppet_common_deploymentclient_base'
   if $ds == undef {
