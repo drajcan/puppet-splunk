@@ -10,6 +10,8 @@ class splunk (
   $install_source             = $splunk::params::install_source,
   $privKeyPath                = $splunk::params::privKeyPath,
   $caCertPath                 = $splunk::params::caCertPath,
+  $ca_crt                     = $splunk::ca_crt,
+  $s2s_pem                    = $splunk::s2s_pem,
   $splunk_os_user             = $splunk::params::splunk_os_user,
   $splunk_bindip              = $splunk::params::splunk_bindip,
   $lm                         = $splunk::params::lm,

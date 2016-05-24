@@ -5,6 +5,8 @@ class splunk::certs::s2s (
   $splunk_os_user    = $splunk::splunk_os_user,
   $splunk_home       = $splunk::splunk_home,
   $puppet_enterprise = $splunk::puppet_enterprise,
+  $ca_crt            = $splunk::ca_crt,
+  $s2s_pem           = $splunk::s2s_pem,
 ){
 
   file { "${splunk_home}/etc/auth/certs":
